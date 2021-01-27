@@ -1,0 +1,45 @@
+aiohttp @ file:///D:/bld/aiohttp_1610358782056/work
+APScheduler==3.6.3
+async-timeout==3.0.1
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1605083924122/work
+beautifulsoup4 @ file:///tmp/build/80754af9/beautifulsoup4_1601924105527/work
+blinker==1.4
+brotlipy==0.7.0
+cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1593420445823/work
+certifi==2020.12.5
+cffi @ file:///C:/ci/cffi_1606255207413/work
+chardet @ file:///D:/bld/chardet_1602255574834/work
+click==7.1.2
+cryptography @ file:///C:/ci/cryptography_1607639129468/work
+discord.py==1.6.0
+google-auth @ file:///home/conda/feedstock_root/build_artifacts/google-auth_1608136875028/work
+google-auth-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/google-auth-oauthlib_1603996258953/work
+gspread @ file:///home/conda/feedstock_root/build_artifacts/gspread_1594582188011/work
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+multidict @ file:///D:/bld/multidict_1610319180953/work
+numpy @ file:///C:/ci/numpy_and_numpy_base_1603468620949/work
+oauthlib==3.0.1
+pandas @ file:///C:/ci/pandas_1609008089615/work
+pyasn1==0.4.8
+pyasn1-modules==0.2.7
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1609976754451/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+PySocks @ file:///C:/ci/pysocks_1594394709107/work
+python-dateutil==2.8.1
+pytz @ file:///tmp/build/80754af9/pytz_1608922264688/work
+requests @ file:///tmp/build/80754af9/requests_1608241421344/work
+requests-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/requests-oauthlib_1595492159598/work
+rsa @ file:///home/conda/feedstock_root/build_artifacts/rsa_1610280765105/work
+selenium @ file:///C:/ci/selenium_1594408106746/work
+six @ file:///C:/ci/six_1605205426665/work
+soupsieve @ file:///tmp/build/80754af9/soupsieve_1607965878077/work
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
+tzlocal @ file:///C:/ci/tzlocal_1597435800236/work
+urllib3 @ file:///tmp/build/80754af9/urllib3_1606938623459/work
+win-inet-pton @ file:///C:/ci/win_inet_pton_1605306165655/work
+wincertstore==0.2
+yarl @ file:///D:/bld/yarl_1610354420082/work
