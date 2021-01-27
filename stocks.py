@@ -27,7 +27,7 @@ def create_stock_row(row):
 def create_msg():
     msg = '<b><i>Today status:</i></b>\n'
     current_stocks = ["Pharmoocan", "Pasternak Shoham", "Unitronics", "Together"]
-    filename = 'C://Users//Administrator//Documents//Stocks//cred.json'
+    filename = './cred.json'
     gc = gspread.service_account(filename=filename)
     sheet_key = '1WAjKb5aPOBnL-KYlF_Fu26o26qYZJdvjckRXxMwyYIE'
     print(gc.auth._project_id)
