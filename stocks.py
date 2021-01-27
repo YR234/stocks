@@ -7,13 +7,16 @@ import time
 
 
 def send_msg():
-
+    print("send")
     text = create_msg()
+    print("sebt")
+
     token = "1552295010:AAH-EKxdbMC9cbNOHKCTO2mn9oK74B64kw0"
     chat_id = "612299579"
 
     url_req = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}&parse_mode=html"
     requests.post(url_req)
+    print("sent")
 
 
 def create_stock_row(row):
@@ -60,7 +63,7 @@ for path in paths:
 x = 1
 
 
-print("here")
+print("here1")
 send_msg()
 time.sleep(10)
 
