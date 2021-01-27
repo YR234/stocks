@@ -76,6 +76,6 @@ for path in paths:
 x = 1
 day_seconds = 86400
 while True:
+    print("Today update!")
     send_msg()
-    print("Sleeping until tommarow")
     time.sleep(day_seconds)
