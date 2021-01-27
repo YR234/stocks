@@ -78,4 +78,4 @@ day_seconds = 86400
 while True:
     send_msg()
     print("Sleeping until tommarow")
-    time.sleep(10)
+    time.sleep(day_seconds)
