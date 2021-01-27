@@ -7,16 +7,13 @@ import time
 
 
 def send_msg():
-    print("send")
-    text = create_msg()
-    print("sebt")
 
+    text = create_msg()
     token = "1552295010:AAH-EKxdbMC9cbNOHKCTO2mn9oK74B64kw0"
     chat_id = "612299579"
 
     url_req = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}&parse_mode=html"
     requests.post(url_req)
-    print("sent")
 
 
 def create_stock_row(row):
@@ -29,11 +26,13 @@ def create_stock_row(row):
 
 def create_msg():
     msg = '<b><i>Today status:</i></b>\n'
-    current_stocks = ["Pharmoocan", "Pasternak Shoham", "Unitronics", "Together"]
+    msg += '<b><i>Real stocks status:</i></b>\n'
+    demo_stocks = ["Unitronics", "Together"]
+    real_stocks = ["Pharmoocan", "Pasternak Shoham"]
     filename = './cred.json'
     gc = gspread.service_account(filename=filename)
     sheet_key = '1WAjKb5aPOBnL-KYlF_Fu26o26qYZJdvjckRXxMwyYIE'
-    print(gc.auth._project_id)
+    # print(gc.auth._project_id)
     sh = gc.open_by_key(sheet_key)
     # print(sh)
 
@@ -42,11 +41,25 @@ def create_msg():
     rows = worksheet.get_all_values()
 
     for row in rows:
-        if row[0] not in current_stocks:
+        if row[0] not in real_stocks:
             continue
         msg += create_stock_row(row)
-    msg += '\n'
-    msg += f'Total earning so far: {rows[-1][1]}'
+
+    msg += '\n<b><i>Demo stocks status:</i></b>\n'
+    for row in rows:
+        if row[0] not in demo_stocks:
+            continue
+        msg += create_stock_row(row)
+
+    for row in rows:
+        if '_True' in row[0]:
+            msg += '\n\n'
+            msg += f'Total Real earning so far: {row[1]}'
+        if '_Demo' in row[0]:
+            msg += '\n'
+            msg += f'Total Demo earning so far: {row[1]}'
+
+
 
     return msg
 
@@ -59,14 +72,11 @@ paths = sys.path
 for path in paths:
     if 'PyCharm' in path:
         continue
-    print(path)
+#     print(path)
 x = 1
 
 
-print("here1")
 send_msg()
 time.sleep(10)
 
 day_seconds = 86400
-
-
