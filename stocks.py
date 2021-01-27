@@ -72,11 +72,10 @@ paths = sys.path
 for path in paths:
     if 'PyCharm' in path:
         continue
-#     print(path)
+    print(path)
 x = 1
-
-
-send_msg()
-time.sleep(10)
-
 day_seconds = 86400
+while True:
+    send_msg()
+    time.sleep(day_seconds)
+    print("Sleeping until tommarow")
